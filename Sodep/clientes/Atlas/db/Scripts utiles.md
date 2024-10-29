@@ -1,0 +1,49 @@
+[[Banco Atlas]]
+1. **Para obtener el schema de una tabla**
+```
+Select owner
+
+from dba_tables
+
+where table_name = 'MICHI_USERS'
+```
+2. **Para ver si una función se utiliza en otros paquetes**
+```
+SELECT * FROM dba_source WHERE LOWER(TEXT) LIKE '%fu_envia_mensaje%' ;
+
+SELECT * FROM DBA_JOBS WHERE LOWER(WHAT) LIKE '%fu_envia_mensaje%' ;
+
+SELECT * FROM DBA_SCHEDULER_JOBS WHERE LOWER(job_action) LIKE '%fu_envia_mensaje%' ;
+```
+3. **Para ver en que paquete esta el procedimiento**
+```
+SELECT owner, object_name, object_type
+
+FROM all_objects
+
+WHERE object_name = 'PAW_TAR' AND object_type = 'PACKAGE'
+```
+4. **Para ejecutar una función es necesario declarar una funcion anonima**
+```
+DECLARE
+
+v_pedido VARCHAR2(4000);
+
+v_respuesta VARCHAR2(4000);
+
+BEGIN
+
+-- JSON de prueba con los datos requeridos
+
+v_pedido := 'algun valor de parametro'
+
+-- Invocar la función
+
+v_respuesta := IT.PAT_3DS.fu_stepup(v_pedido); --aca ejecuta la funcioan
+
+-- Mostrar el resultado
+
+DBMS_OUTPUT.PUT_LINE('Respuesta: ' || v_respuesta);
+
+END;
+```

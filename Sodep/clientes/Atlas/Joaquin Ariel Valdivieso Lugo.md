@@ -1,0 +1,1 @@
+Es el product owner del equipo [[Banco Atlas]] Web, 10 años trabajando en Atlas, su fuerte la DB, alto manejo de PL/SQL 
