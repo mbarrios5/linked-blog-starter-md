@@ -1,1 +1,1 @@
-[[Las doctrinas de la gracia]]
+[[Las medios de la gracia (media gratia).]]

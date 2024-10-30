@@ -47,3 +47,7 @@ DBMS_OUTPUT.PUT_LINE('Respuesta: ' || v_respuesta);
 
 END;
 ```
+5. Mostrar el popup
+```
+select a.*, a.rowid from bm_alertas awhere a.tip_alerta = 'BAN'order by a.fec_insercion desc;select * from bm_promociones a;select * from bm_alerta_personas a;select * from bm_perfiles aorder by a.fec_insercion desc; select a.*, a.rowid from bm_promocion_perfiles a; 
+```
