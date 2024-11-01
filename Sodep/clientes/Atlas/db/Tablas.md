@@ -16,5 +16,15 @@
     Se registra todas las monedas.
 8. **GE_CUENTAS**	
     Tiene las los detalles de la cuentas del cliente por ejemplo la moneda, estado
-    
-	
+9. **TA_CLI_ATLAS_SOS** 
+    Tabla donde se guarda info del ATLAS SOS
+10. **GE_MOVIMIENTOS**
+	Todos los movimientos del cliente
+11. **BCAMOVIL.MICHI_SESSIONS_N**
+	Aca están todas las sessiones del usuarios
+12. **GE_SNP_TRANSFERENCIAS**
+    De acá se forman las info adicionales
+13. **BCAMOVIL.MICHI_TRANSACTIONS**
+    Todas la transferencias se registran aca
+14.  **BCAMOVIL.MICHI_SESSIONS_N**
+
