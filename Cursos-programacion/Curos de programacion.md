@@ -1,0 +1,1 @@
+En este folder se almacenara todos los datos de los cursos

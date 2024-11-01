@@ -51,3 +51,38 @@ END;
 ```
 select a.*, a.rowid from bm_alertas awhere a.tip_alerta = 'BAN'order by a.fec_insercion desc;select * from bm_promociones a;select * from bm_alerta_personas a;select * from bm_perfiles aorder by a.fec_insercion desc; select a.*, a.rowid from bm_promocion_perfiles a; 
 ```
+6. Para habilitar envio de correo, esto sirve para enviar correo desde atlas.Tener en cuenta volver a desabilitar el 'N'
+```
+DECLAREBEGIN  
+BEGINUPDATE ge_par_dinamicos a  
+  SET    a.val_parametro = 'S'  
+  WHERE  a.parametro = 'ENV_MAI_HOMEBANKING';COMMIT;EXCEPTION  
+WHEN others THEN  
+  NULL;END;IT_MAIL.mail(sender => 'informacion@atlas.com.py', recipients => 'joaquin.valdivieso@atlas.com.py', subject => 'Prueba', message => 'Prueba');BEGIN  
+  UPDATE ge_par_dinamicos a  
+  SET    a.val_parametro = 'N'  
+  WHERE  a.parametro = 'ENV_MAI_HOMEBANKING';  
+    
+  COMMIT;  
+  exception  
+WHEN others THEN  
+  NULL;  
+END;EXCEPTION  
+WHEN others THEN  
+  BEGINUPDATE ge_par_dinamicos a  
+    SET    a.val_parametro = 'N'  
+    WHERE  a.parametro = 'ENV_MAI_HOMEBANKING';COMMIT;EXCEPTION  
+  WHEN others THEN  
+    NULL;END;END;
+```
+
+7. Para activa el modo edicion 
+```
+BEGIN  
+  
+Begin pre_ini_aplicacion; pae_cnf.G_COD_MODULO := 1; end ;  
+-- Aqui va la sentencia  
+COMMIT;  
+  
+END;
+```
