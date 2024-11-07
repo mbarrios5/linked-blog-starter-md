@@ -86,3 +86,7 @@ COMMIT;
   
 END;
 ```
+8. Para obtener saldo atlas adelanto
+```
+SELECT * FROM IT.TA_CTA_TARJETAS WHERE COD_MODALIDAD = 50 AND NRO_CTA_AHORRO IS NOT NULL
+```

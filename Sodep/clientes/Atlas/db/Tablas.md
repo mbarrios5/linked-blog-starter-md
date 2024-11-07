@@ -1,7 +1,7 @@
 [[Banco Atlas]]
 
 1. **IT.TA_TARJETAS**
-	En esta tabla se encuentra los datos de la tarjeta de crédito su tabla asociada que contiene mas datos es **IT.TA_CTA_TARJETAS**
+	En esta tabla se encuentra los datos de la tarjeta de crédito su tabla asociada que contiene mas datos es **IT.TA_CTA_TARJETAS**, tambien econtramos Atlas Adelanto
 2. **IT.GE_PARAMETROS**	
 	Se encuentra los parametros generales, se utiliza mucho como comodín por ejemplo  para saber si esta activo o no un parametro.
 3. **ah_tar_debitos**
@@ -23,8 +23,9 @@
 11. **BCAMOVIL.MICHI_SESSIONS_N**
 	Aca están todas las sessiones del usuarios
 12. **GE_SNP_TRANSFERENCIAS**
-    De acá se forman las info adicionales
+    De acá se forman las info adicionales, de algunos transacciones
 13. **BCAMOVIL.MICHI_TRANSACTIONS**
     Todas la transferencias se registran aca
 14.  **BCAMOVIL.MICHI_SESSIONS_N**
-
+15. **BCAMOVIL.BW_AGE_CONTACTOS**
+    Almacena los contactos 
