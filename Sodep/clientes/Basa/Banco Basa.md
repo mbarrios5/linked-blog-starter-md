@@ -1,3 +1,4 @@
+Cliente de [[SODEP SA]]
 Repositorio 
 Tecnologias
 
@@ -28,8 +29,12 @@ Utiliza JPA con configuracion ddl-auto: none que hace que no cree las tablas aut
 Modulo administrador usuairo banca emperesa
  
 **SONNAR**
-mvn clean verify sonar:sonar -Dsonar.projectKey=basa-be-next -Dsonar.projectName='basa-be-next' -Dsonar.host.url=[http://10.1.0.4:9059](http://10.1.0.4:9059) -Dsonar.token=sqp_3374758b6ad345849f34cd9c03297ae3a06e054b
 
-mvn clean verify sonar:sonar -Dsonar.projectKey=basa-be-next -Dsonar.projectName='basa-be-next' -Dsonar.host.url=[http://10.1.0.4:9059](http://10.1.0.4:9059) -Dsonar.token=sqp_3374758b6ad345849f34cd9c03297ae3a06e054b
+```
+mvn clean install verify sonar:sonar -Dsonar.projectKey=basa-be-next -Dsonar.projectName='basa-be-next' -Dsonar.host.url=http://10.1.0.4:9059 -Dsonar.token=sqp_3374758b6ad345849f34cd9c03297ae3a06e054b
+```
+ sonnar basa mbarrios y el pass Cambiar123
 
-mbarrios y el pass Cambiar123
+
+
+

@@ -90,3 +90,17 @@ END;
 ```
 SELECT * FROM IT.TA_CTA_TARJETAS WHERE COD_MODALIDAD = 50 AND NRO_CTA_AHORRO IS NOT NULL
 ```
+9. Para obtener el calendario 
+```
+   select * from GE_CALENDARIOS Aorder by TO_NUMBER(A.COD_MODULO) desc; Begin pre_ini_aplicacion; pae_cnf.G_COD_MODULO := 1; end ; /UPDATE GE_CALENDARIOS ASET A.FEC_ACTUAL = TRUNC(SYSDATE);COMMIT;select * from ge_snp_horarios a;Begin pre_ini_aplicacion; pae_cnf.G_COD_MODULO := 1; end ; /UPDATE ge_snp_horarios ASET A.Fecha = TRUNC(SYSDATE);COMMIT;
+   
+```
+10. Para matar sesiones
+```
+-- kill update MICHI_SESSIONS   SET MICHI_SESSIONS.STATUS = 'EXPIRED'--select * from MICHI_SESSIONS aWHERE SESSION_IID = (select max(sessions.SESSION_IID)                        from michi_sessions sessions                       where sessions.COD_PERSONA = '&cod_persona')and MICHI_SESSIONS.STATUS != 'EXPIRED';update MICHI_SESSIONS_N   SET MICHI_SESSIONS_N.STATUS = 'EXPIRED'--select * from MICHI_SESSIONS_NWHERE SESSION_IID = (select max(sessions.SESSION_IID)                        from MICHI_SESSIONS_N sessions                       where sessions.COD_PERSONA = '&cod_persona')and MICHI_SESSIONS_n.STATUS != 'EXPIRED';commit;
+```
+11. 
+```
+    -- g1000 - Can't get AES configuration running-- Es porque estan los dos michi auth, el viejo y el nuevo, se debe de eliminar el viejo y dejar el nuevo select a.*, a.rowid from michi_api_register awhere a.instance_id like '%181%'and a.api_code like '%auth%'order by a.fec_in
+    sercion desc;-- El viejo es puerto 8080 y el nuevo es 8090 debe de estar 
+```

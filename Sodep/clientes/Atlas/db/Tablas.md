@@ -29,3 +29,9 @@
 14.  **BCAMOVIL.MICHI_SESSIONS_N**
 15. **BCAMOVIL.BW_AGE_CONTACTOS**
     Almacena los contactos 
+16. **IT.GE_CALENDARIOS**
+    Guarda el calendario
+17. **GE_CTA_CLIENTES**
+	Trae todos los datos de una cuenta, personas asociadas a esta cuenta
+18. **LC_CON_CAMBIOS**
+	Trae los contratos de cambios
